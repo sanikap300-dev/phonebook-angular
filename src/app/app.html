@@ -1,0 +1,43 @@
+<div class="container">
+
+```
+<h1>Phonebook</h1>
+
+<input type="text" placeholder="Enter Name" [(ngModel)]="name">
+<br><br>
+
+<input type="text" placeholder="Enter Number" [(ngModel)]="number">
+<br><br>
+
+<button (click)="add()">Add</button>
+<button (click)="update()">Update</button>
+<button (click)="delete()">Delete</button>
+
+<hr>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Name</th>
+        <th>Number</th>
+        <th>Action</th>
+    </tr>
+
+    @for (contact of contacts; track $index) {
+    <tr>
+        <td>{{ contact.name }}</td>
+        <td>{{ contact.number }}</td>
+        <td>
+            <button (click)="edith($index)">Edit</button>
+            <button (click)="deletedata($index)">Delete</button>
+        </td>
+    </tr>
+    }
+
+</table>
+```
+
+</div>
+
+
+  
+    
